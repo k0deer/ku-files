@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: basesdedatosezproxyendeporte
+spec:
+  hosts:
+  - syscomer-net.endeporte.basesdedatosezproxy.com
+  tls:
+  - match:
+    - port: 443
+      sni_hosts:
+      - syscomer-net.endeporte.basesdedatosezproxy.com
+    route:
+    - destination:
+        host: syscomer.net
+        port:
+          number: 443
+      weight: 100
