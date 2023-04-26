@@ -5,7 +5,7 @@ metadata:
   namespace: app
 spec:
   hosts:
-  - syscomer-net.endeporte.basesdedatosezproxy.com/
+  - syscomer-net.endeporte.basesdedatosezproxy.com
   ports:
   - number: 443
     name: https
